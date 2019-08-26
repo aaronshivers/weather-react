@@ -1,5 +1,21 @@
 .form {
-  
+
+}
+
+.form__label {
+  font-size: $large;
+  color: $black;
+  padding-bottom: 2vh;
+}
+
+.form__input-group {
+  width: 100%;
+  padding-top: 22px;
+}
+
+.form__input {
+  padding: $medium;
+  border: none;
 }
 
 .form__btn {
