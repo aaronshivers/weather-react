@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { hot } from 'react-hot-loader/root'
 import { Container } from 'react-bootstrap'
+import Title from './Title'
 import AddressForm from './AddressForm'
 import WeatherResults from './WeatherResults'
 import {  geocodeAddress, getWeather } from '../actions/actions'
@@ -22,11 +23,12 @@ const App = () => {
 
   return (
     <main className="container">
-      <h1 className="display-4 text-center">hello</h1>
+      <Title />
       {
-        Object.keys(weather).length === 0 && <AddressForm handleGetWeather={handleGetWeather} />
+        Object.keys(weather).length === 0
+          ? <AddressForm handleGetWeather={handleGetWeather} />
+          : <WeatherResults {...weather} />      
       }
-      <WeatherResults {...weather} />
     </main>
   )
 }

@@ -50,6 +50,11 @@ module.exports = env => (
               loader: 'url-loader'
             }
           ]
+        }, {
+          test: /\.ttf$/,
+          use: [
+            'file-loader'
+          ]
         }
       ]
     },
