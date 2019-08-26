@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = env => (
   {
-    entry: ['./src/app.jsx'],
+    entry: ['react-hot-loader/patch', './src/app.jsx'],
     resolve: {
       extensions: ['.js', '.jsx']
     },
@@ -19,6 +19,9 @@ module.exports = env => (
             presets: [
               '@babel/preset-env',
               '@babel/preset-react'
+            ],
+            plugins: [
+              'react-hot-loader/babel'
             ]
           }
         }, {
@@ -65,7 +68,8 @@ module.exports = env => (
     ],
     devtool: env === 'production' ? 'source-map' : 'inline-source-map',
     devServer: {
-      historyApiFallback: true
+      historyApiFallback: true,
+      hot: true
     }
   }
 )

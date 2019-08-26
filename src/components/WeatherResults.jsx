@@ -14,7 +14,9 @@ const WeatherResults = ({
   }) => (
   <div>
     <div>{address}</div>
-    <div>{temperature}</div>
+    <h1 className="display-2">
+        {temperature}{temperature && <span>&#176;</span>}
+    </h1>
     <div>{feelsLike}</div>
     <div>{temperatureHigh}</div>
     <div>{temperatureLow}</div>

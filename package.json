@@ -7,7 +7,7 @@
     "heroku-postbuild": "npm run build:prod",
     "build:prod": "webpack -p --env production",
     "build:dev": "webpack --mode=development",
-    "dev-server": "webpack-dev-server",
+    "dev-server": "webpack-dev-server --hot",
     "start": "node server/server.js",
     "test": "eslint ./**/*.{js,jsx}",
     "test:fix": "eslint ./**/*.{js,jsx} --fix"
@@ -45,7 +45,8 @@
     "express": "^4.17.1",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
-    "react-dom": "^16.9.0",
+    "react-dom": "npm:@hot-loader/react-dom@^16.9.0",
+    "react-hot-loader": "^4.12.11",
     "regenerator-runtime": "^0.13.3"
   }
 }
