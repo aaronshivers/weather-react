@@ -1,4 +1,7 @@
+@import '~normalize-scss/sass/normalize/import-now';
 @import './custom/custom';
-@import '../../node_modules/bootstrap/scss/bootstrap';
+// @import '~bootstrap';
 
 @import './base/base';
+@import './components/container';
+@import './components/form';

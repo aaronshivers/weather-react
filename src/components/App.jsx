@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { hot } from 'react-hot-loader/root'
 import { Container } from 'react-bootstrap'
 import AddressForm from './AddressForm'
 import WeatherResults from './WeatherResults'
@@ -20,14 +21,14 @@ const App = () => {
   }
 
   return (
-    <Container className="bg-primary text-white">
-      <h1 className="display-4 text-center">weather</h1>
+    <main className="container">
+      <h1 className="display-4 text-center">hello</h1>
       {
         Object.keys(weather).length === 0 && <AddressForm handleGetWeather={handleGetWeather} />
       }
       <WeatherResults {...weather} />
-    </Container>
+    </main>
   )
 }
 
-export default App
+export default hot(App)
