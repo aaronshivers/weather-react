@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     semi: ['error', 'never'],
     'comma-dangle': ['error', 'never'],
-    'arrow-parens': ['warn', 'as-needed']
+    'arrow-parens': ['warn', 'as-needed'],
+    quotes: ['error', 'single']
   },
-}
+};

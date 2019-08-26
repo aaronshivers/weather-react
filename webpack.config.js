@@ -14,7 +14,13 @@ module.exports = env => (
         {
           test: /\.jsx?$/,
           exclude: /node_modules/,
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ]
+          }
         }, {
           test: /\.s?css$/,
           use: [
@@ -46,7 +52,7 @@ module.exports = env => (
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
-        title: 'weather-react',
+        title: 'weather',
         meta: {
           viewport: 'width=device-width, initial-scale=1'
         }
