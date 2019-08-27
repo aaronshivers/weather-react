@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { hot } from 'react-hot-loader/root'
 import { Container } from 'react-bootstrap'
 import Title from './Title'
+import Clock from './Clock'
+import Location from './Location'
+import CurrentTemp from './CurrentTemp'
 import AddressForm from './AddressForm'
 import WeatherResults from './WeatherResults'
 import {  geocodeAddress, getWeather } from '../actions/actions'
@@ -22,8 +25,11 @@ const App = () => {
   }
 
   return (
-    <main className="container">
+    <main>
       <Title />
+      <Clock />
+      <Location location={weather.address} />
+      <CurrentTemp currentTemp={weather.temperature} />
       {
         Object.keys(weather).length === 0
           ? <AddressForm handleGetWeather={handleGetWeather} />

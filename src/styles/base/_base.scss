@@ -1,10 +1,6 @@
-// Sizes
-$medium: 1rem;
-$large: 1.5rem;
-
 // Fonts
 @font-face {
-  font-family: 'MyFont';
+  font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
@@ -13,8 +9,31 @@ $large: 1.5rem;
   src: url('../fonts/Roboto-Thin.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
 html {
-  background-image: url('/src/images/bg.jpg');
+  font-size: 100%;
+}
+
+body {
+  background-image: url('/src/images/bg.webp');
+  background-repeat: no-repeat;
+  background-position: center top;
+  font-family: 'Roboto-Regular', sans-serif;
   color: $black;
-  font-family: 'MyFont', sans-serif;
+}
+
+main {
+    // position: absolute;
+
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

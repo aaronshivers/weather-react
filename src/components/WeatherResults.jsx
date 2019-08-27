@@ -2,7 +2,6 @@ import React from 'react'
 import moment from 'moment'
 
 const WeatherResults = ({
-    address,
     temperature,
     feelsLike, 
     temperatureHigh,
@@ -13,11 +12,7 @@ const WeatherResults = ({
     tomorrow, 
     forecast
   }) => (
-  <div>
-    <div>{address}</div>
-    <h1 className="display-2">
-      {temperature}{temperature && <span>&#176;</span>}
-    </h1>
+  <section className="">
     {
       feelsLike && <div>Currently Feels Like: {feelsLike}</div>
     }
@@ -31,7 +26,7 @@ const WeatherResults = ({
     <div>Today: {today}</div>
     <div>Tomorrow: {tomorrow}</div>
     <div>Forecast: {forecast}</div>
-  </div>
+  </section>
 )
 
 export default WeatherResults
