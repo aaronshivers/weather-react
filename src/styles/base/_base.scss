@@ -1,19 +1,19 @@
 // Fonts
 @font-face {
   font-family: 'Roboto';
-  font-display: auto;
+  font-display: fallback;
   src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto-Thin';
-  font-display: auto;
+  font-display: fallback;
   src: url('../fonts/Roboto-Thin.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto-Light';
-  font-display: auto;
+  font-display: fallback;
   src: url('../fonts/Roboto-Light.ttf') format('truetype');
 }
 
