@@ -18,9 +18,9 @@ const AddressForm = ({ handleGetWeather }) => {
           onChange={e => setAddress(e.target.value)}
           placeholder="123 Main St., Anytown, USA"
         />
-      <button className="form__btn">
-        Get Weather
-      </button>
+        <button className="form__btn">
+          Get Weather
+        </button>
       </div>
     </form>
   )
