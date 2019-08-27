@@ -44,10 +44,13 @@ module.exports = env => (
             }
           ]
         }, {
-          test: /\.(png|jpg|gif)$/i,
+          test: /\.(png|jpg|gif|webp)$/i,
           use: [
             {
-              loader: 'url-loader'
+              loader: 'url-loader',
+              options: {
+                limit: 8192
+              }
             }
           ]
         }, {

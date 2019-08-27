@@ -1,16 +1,19 @@
 // Fonts
 @font-face {
   font-family: 'Roboto';
+  font-display: auto;
   src: url('../fonts/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto-Thin';
+  font-display: auto;
   src: url('../fonts/Roboto-Thin.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Roboto-Light';
+  font-display: auto;
   src: url('../fonts/Roboto-Light.ttf') format('truetype');
 }
 
@@ -19,7 +22,7 @@ html {
 }
 
 body {
-  background-image: url('/src/images/bg.webp');
+  background-image: url('../images/bg.webp');
   background-repeat: no-repeat;
   background-position: center top;
   font-family: 'Roboto-Regular', sans-serif;
