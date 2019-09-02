@@ -16,7 +16,7 @@ const AddressForm = ({ handleGetWeather }) => {
             placeholder="enter address..."
             spellCheck="false"
           />
-          <button className="form__btn input-group__item">
+          <button type="submit" className="form__btn input-group__item">
             get weather
           </button>
         </div>

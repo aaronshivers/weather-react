@@ -1,12 +1,12 @@
 @import '~normalize-scss/sass/normalize/import-now';
-@import './custom/custom';
+// @import './custom/custom';
 // @import '~bootstrap';
 
+// @import './components/container';
 @import './base/settings';
 @import './base/base';
-@import './components/title';
-@import './components/clock';
-@import './components/location';
-@import './components/current-temp';
-@import './components/container';
+// @import './components/title';
+// @import './components/clock';
+// @import './components/location';
+// @import './components/current-temp';
 @import './components/form';

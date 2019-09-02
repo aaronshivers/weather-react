@@ -1,7 +1,8 @@
-const { GEOCODE_API_KEY } = process.env
-const { DARKSKY_API_KEY } = process.env
+const GEOCODE_API_KEY = process.env.GEOCODE_API_KEY
+const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY
 
 const geocodeAddress = async address => {
+
   try {
     const addressEncoded = (encodeURIComponent(address))
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${addressEncoded}&key=${GEOCODE_API_KEY}`

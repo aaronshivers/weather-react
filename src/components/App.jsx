@@ -15,6 +15,7 @@ const App = () => {
 
   const handleGetWeather = async ({ e, address }) => {
     e.preventDefault()
+    
     const {
       formattedAddress,
       latitude,
@@ -25,17 +26,21 @@ const App = () => {
   }
 
   return (
-    <main>
-      <Title />
-      <Clock />
-      <Location location={weather.address} />
-      <CurrentTemp currentTemp={weather.temperature} />
-      {
-        Object.keys(weather).length === 0
-          ? <AddressForm handleGetWeather={handleGetWeather} />
-          : <WeatherResults {...weather} />      
-      }
-    </main>
+    <div className="container">
+      <header>
+        <Title />
+        <Clock />
+      </header>
+      <main>
+        <Location location={weather.address} />
+        <CurrentTemp currentTemp={weather.temperature} />
+        {
+          Object.keys(weather).length === 0
+            ? <AddressForm handleGetWeather={handleGetWeather} />
+            : <WeatherResults {...weather} />      
+        }
+      </main>
+    </div>
   )
 }
 
